@@ -25,13 +25,15 @@ export default function Input({
           value={value}
           type={type}
         />
-        <Image
-          className={styles.image}
-          width={24}
-          height={24}
-          alt="error exclimation mark"
-          src="/icon-error.svg"
-        />
+        {errorMessage ? (
+          <Image
+            className={styles.image}
+            width={24}
+            height={24}
+            alt="error exclimation mark"
+            src="/icon-error.svg"
+          />
+        ) : null}
       </div>
       {errorMessage ? (
         <span className={styles.errorMessage}>{errorMessage}</span>
