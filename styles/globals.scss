@@ -1,7 +1,15 @@
+@import './_settings';
+
 html,
 body {
   padding: 0;
   margin: 0;
+  background-color: $pink;
+  background-image: url('../public/bg-intro-mobile.png');
+
+  @include desktop() {
+    background-image: url('../public/bg-intro-desktop.png');
+  }
 }
 
 a {

@@ -1,0 +1,36 @@
+@import '@/styles/__settings.scss';
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  width: toRem(327);
+  gap: toRem(16);
+  color: $white;
+  text-align: center;
+
+  @include desktop() {
+    width: toRem(525);
+    text-align: left;
+  }
+
+  .title {
+    font-weight: 700;
+    font-size: toRem(28);
+    line-height: toRem(36);
+    letter-spacing: toRem(-0.291667);
+    margin: 0;
+
+    @include desktop() {
+      font-size: toRem(50);
+      line-height: toRem(55);
+      letter-spacing: toRem(-0.520833);
+    }
+  }
+
+  .subtitle {
+    font-weight: 500;
+    font-size: toRem(16);
+    line-height: toRem(26);
+    margin: 0;
+  }
+}

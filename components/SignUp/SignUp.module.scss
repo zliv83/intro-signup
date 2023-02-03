@@ -1,0 +1,25 @@
+@import '@/styles/__settings.scss';
+
+.signUp {
+  display: grid;
+  grid-template-columns: 1 1fr;
+  padding: toRem(88) toRem(24) toRem(68) toRem(24);
+
+  @include desktop() {
+    grid-template-columns: 1fr 1fr;
+    @include center();
+
+    .heroGrid {
+      display: flex;
+      @include center();
+    }
+  }
+
+  .tryIt {
+    margin-top: toRem(64);
+  }
+
+  .form {
+    margin-top: toRem(24);
+  }
+}

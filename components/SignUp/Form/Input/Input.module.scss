@@ -1,0 +1,55 @@
+@import '@/styles/__settings.scss';
+
+@mixin input() {
+  width: 100%;
+  height: toRem(56);
+  background-color: $white;
+  border: toRem(1) solid $gray;
+  border-radius: toRem(10);
+  padding: toRem(15) 0 toRem(15) toRem(20);
+  font-weight: 600;
+  font-size: toRem(14);
+  line-height: toRem(26);
+  color: $black;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+
+  &:focus {
+    outline: none !important;
+    border: toRem(1) solid $purple;
+  }
+}
+
+.input {
+  @include input();
+}
+
+.error {
+  @include input();
+  border: toRem(1) solid red;
+
+  &::placeholder {
+    color: red;
+  }
+
+  &:focus {
+    outline: none !important;
+    border: toRem(1) solid red;
+  }
+}
+
+.errorMessage {
+  color: red;
+  font-size: toRem(12);
+}
+
+.textArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.image {
+  margin-left: toRem(-60);
+  z-index: 10;
+}

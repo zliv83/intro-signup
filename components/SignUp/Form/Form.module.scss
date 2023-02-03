@@ -1,0 +1,41 @@
+@import '@/styles/__settings.scss';
+
+@mixin form() {
+  width: 100%;
+  height: toRem(442);
+  background-color: $white;
+  border-radius: toRem(10);
+  display: flex;
+  flex-direction: column;
+  padding: toRem(24);
+  gap: toRem(16);
+
+  @include desktop() {
+    width: toRem(540);
+    height: toRem(474);
+  }
+
+  .terms {
+    margin-top: toRem(8);
+  }
+}
+
+.form {
+  @include form();
+}
+
+.errorForm {
+  @include form();
+
+  @include desktop() {
+    height: toRem(700);
+  }
+}
+
+.errorFormPassword {
+  @include form();
+
+  @include desktop() {
+    height: toRem(650);
+  }
+}

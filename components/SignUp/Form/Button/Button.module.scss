@@ -1,0 +1,21 @@
+@import '@/styles/__settings.scss';
+
+.button {
+  color: $white;
+  background-color: $green;
+  height: toRem(56);
+  border-radius: toRem(5);
+  border: none;
+  box-shadow: inset toRem(0) toRem(-4) toRem(0) rgba(0, 0, 0, 0.0908818);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: toRem(15);
+  line-height: toRem(26);
+  text-align: center;
+  letter-spacing: toRem(1);
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover;
+  }
+}

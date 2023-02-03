@@ -1,0 +1,16 @@
+@import '@/styles/__settings.scss';
+
+.terms {
+  text-align: center;
+  font-weight: 500;
+  font-size: toRem(11);
+  line-height: toRem(12);
+  color: $terms;
+  word-spacing: toRem(1);
+
+  .bold {
+    font-weight: 700;
+    color: $pink;
+    margin-left: toRem(3);
+  }
+}

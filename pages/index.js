@@ -1,4 +1,7 @@
+/* eslint-disable import/extensions */
 import Head from 'next/head';
+
+import SignUp from '@/components/SignUp';
 
 import styles from './Home.module.scss';
 
@@ -8,6 +11,7 @@ export default function Home() {
       <Head>
         <title>Home Page</title>
       </Head>
+      <SignUp />
     </div>
   );
 }
