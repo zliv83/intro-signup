@@ -2,7 +2,6 @@
 
 @mixin form() {
   width: 100%;
-  height: toRem(442);
   background-color: $white;
   border-radius: toRem(10);
   display: flex;
@@ -12,7 +11,6 @@
 
   @include desktop() {
     width: toRem(540);
-    height: toRem(474);
   }
 
   .terms {
@@ -22,20 +20,18 @@
 
 .form {
   @include form();
+  height: toRem(442);
+
+  @include desktop() {
+    height: toRem(474);
+  }
 }
 
 .errorForm {
   @include form();
+  height: auto;
 
   @include desktop() {
-    height: toRem(700);
-  }
-}
-
-.errorFormPassword {
-  @include form();
-
-  @include desktop() {
-    height: toRem(650);
+    height: auto;
   }
 }

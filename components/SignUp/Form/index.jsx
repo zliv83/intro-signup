@@ -19,6 +19,7 @@ export default function Form({ className }) {
     email: '',
     password: '',
   });
+  const isValid = Object.keys(errors).length === 0;
 
   const handleChange = (e) => {
     setForm({
@@ -78,9 +79,8 @@ export default function Form({ className }) {
   };
 
   useEffect(() => {
-    console.log(errors);
     if (loading) {
-      if (Object.keys(errors).length === 0) {
+      if (isValid) {
         // success
       } else {
         setLoading(false);
@@ -123,15 +123,12 @@ export default function Form({ className }) {
     },
   ];
 
+  const formStyle = isValid ? styles.form : styles.errorForm;
+
   return (
     <>
       <TryIt />
-      <div
-        className={`${styles.form} ${className}`}
-        style={{
-          height: !errors ? '29.625rem' : 'auto',
-        }}
-      >
+      <div className={`${formStyle} ${className}`}>
         {inputs.map((input) => {
           const errorMessage = () => {
             if (input.name === 'email') {
