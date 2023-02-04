@@ -129,7 +129,7 @@ export default function Form({ className }) {
       <div
         className={`${styles.form} ${className}`}
         style={{
-          height: errors && 'auto',
+          height: !errors ? '29.625rem' : 'auto',
         }}
       >
         {inputs.map((input) => {
